@@ -12,7 +12,7 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   height: auto;
   padding: .5em .5em;
   background: #F3F3F3;
@@ -25,11 +25,12 @@ body {
 ul.nav-links {
   list-style: none;
   display: flex;
-  align-items: center;
   padding: 0;
+  margin: 0;
   justify-content: space-around;
   flex-basis: 12em;
   color: #000000;
+  font-size: .8em;
 }
 
 .nav-links li a{
@@ -57,16 +58,75 @@ ul.nav-links {
   width: 90%;
   height: 100%;
   margin: 1em auto;
-  border: 1px solid #CACACA;
-  border-radius: 3px;
+  border-bottom: 1px solid #CACACA;
+  
 }
 
 /* ONLY works because all images are perfect squares! */
-.cat-images section{
+.cat-images>section{
   flex-basis: 330px;
-  height: 330px;
+  /* border: 1px solid red; */
 }
 
 .cat-images section img {
   max-width: 100%;
+  border: 1px solid #CACACA;
+  border-radius: 3px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.meta-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meta-info h3 {
+  color: #CACACA;
+}
+
+.attribution {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.attribution h4 {
+  margin-right: 10px;
+  color: #777777;
+  text-align: right;
+}
+
+.cat-title {
+  color: #333333;
+}
+
+.attribution section {
+  flex-basis: 60px;
+  flex-shrink: 0;
+}
+
+.attribution section img {
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+  ul.nav-links {
+    font-size: 1.5em;
+    flex-basis: 16em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1366px) {
+  ul.nav-links {
+    font-size: 2em;
+  }
+
+  .navigation .brand {
+    height: 4.5vh;
+  }
 }
